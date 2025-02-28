@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Outfit:wght@100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Manrope", serif;
+    max-width: 1440px;
+    /* background-color: bisque; */
+}
+.img-btn{
+  background-color: rgb(211, 211, 211, 0.7) ;
+}
+form input,
+form button{
+  border-radius: 5px;
+}
+.bg-header{
+    background-image: url("images/Frame_9325.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    font-family: "Manrope", serif;
+}
+.bh-logo{
+    padding: .5rem;
+    border-radius: 50%;
+}
+.header-nav{
+    padding: 2rem;
+
+}
+
+.hero-section{
+  margin-top: 5rem;
+}
+
+  
+  .navbar {
+    padding:  2rem 4rem;
+    background-color: rgba(51, 51, 51, 0.5);
+  }
+  .navbar1{
+    background-color: rgba(51, 51, 51, 0.9);
+  }
+  .hero-bar{
+    background-color: rgba(241, 240, 240, 0.4);
+    padding: .95rem ;
+    margin-top: 3.5rem;
+  }
+ 
+  .titles{
+    padding-top: .75rem;
+  }
+  .logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .hamburger {
+    display: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.5rem;
+  }
+  .nav-link{
+    position: relative;
+    padding: 5px 0;
+
+  }
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+    left: 0;
+}
+  .nav-links {
+    display: flex;
+    list-style: none;
+  }
+  
+  .nav-links li {
+    margin-left: 2rem;
+  }
+  
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+
+  /* checkbox */
+  /* Hide the default checkbox */
+.custom-checkbox input[type="checkbox"] {
+  display: none;
+}
+/* .label-text{
+  font-size: .75rem;
+
+} */
+/* Style the custom checkbox */
+.custom-checkbox .checkmark {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-color: white;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+/* Change the checkbox color when checked */
+.custom-checkbox input[type="checkbox"]:checked + .checkmark {
+  background-color: #3d9970; /* Green color */
+  border-color: #3d9970;
+}
+
+/* Add a checkmark inside the checkbox */
+.custom-checkbox .checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 5px;
+  top: 2px;
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/* Show the checkmark when checked */
+.custom-checkbox input[type="checkbox"]:checked + .checkmark::after {
+  display: block;
+}
+.custom-checkbox .checkmark {
+  transition: background-color 0.3s, border-color 0.3s;
+}
+.signup-btn{
+  transition: all 400ms ease-in-out;
+}
+.signup-btn:hover{
+  background-color: transparent;
+  color: #3d9970;
+  border: 2px solid #3d9970;
+}
+.google-btn{
+  transition: all 400ms ease-in-out;
+}
+.google-btn:hover{
+  background-color: black;
+  color: #fff;
+}
+/* carousel */
+.swiper {
+  height: 50rem;
+  z-index: 10;
+  background-color: #fff;
+  position: relative;
+}
+
+.swiper-slide {
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.swiper-slide img {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-button-prev, .swiper-button-next {
+  color: black;
+  display: none;
+}
+
+.swiper-pagination-bullet-active {
+  background-color:#3d9970;
+}
+.custom-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.custom-nav button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+#custom-prev{
+ /* position:absolute;
+ top: 50%;
+ left: 0; */
+ background-color: rgba(90, 87, 87, 0.9);
+ /* border-radius: 50%;
+ z-index: 20;
+ padding: 1rem;
+ font-size: 1.25rem;
+ color: #fff; */
+}
+#custom-next{
+  /* position:absolute;
+  top: 50%;
+  right: 0; */
+  background-color: rgb(61, 153, 112, 0.9);
+  /* z-index: 20;
+  padding: 1rem;
+  font-size: 1.25rem;
+  border-radius: 50%;
+  color: white; */
+}
+.custom-nav img {
+  width: 40px; /* Adjust size */
+  height: 40px;
+  transition: 0.3s;
+}
+
+.custom-nav img:hover {
+  scale: 1.1;
+}
+
+/* footer */
+  footer{
+    padding: 5rem  3rem;
+    border-bottom: 1px solid gray;
+    /* color: #4ba586; */
+  }
+  .footer-links{
+    font-weight: 300;
+  }
+
+  /* Sign up page */
+  .signup-image{
+    background-image: url("images/13625_1.png") ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+  }
+  @media (max-width: 768px) {
+    .hamburger {
+      display: block;
+    }
+  
+    .nav-links {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      z-index: 50;
+      height: 100vh;
+      width: 70%;
+      background-color: #333;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: left 0.4s ease;
+    }
+  
+    .nav-links.active {
+      left: 0;
+    }
+  
+    .nav-links li {
+      margin: 1.5rem 0;
+    }
+  }
