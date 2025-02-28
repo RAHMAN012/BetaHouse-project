@@ -1,0 +1,13 @@
+{
+    "name": "beta-project-2",
+    "version": "1.0.0",
+    "description": "A project using Tailwind CSS and DaisyUI",
+    "scripts": {
+        "build": "tailwindcss "
+    },
+    "devDependencies": {
+        
+        "tailwindcss": "^3.4.17"
+    }
+    
+}
