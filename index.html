@@ -15,7 +15,7 @@
   </head>
   <body>
     <header class="bg-header h-[55rem]  lg:h-[40rem]">
-      <nav class="navbar flex items-center justify-between px-[2.5rem] py-[1.85rem]  text-white  z-50">
+      <nav class="navbar flex items-center justify-between px-[2.5rem] py-[1.85rem]   text-white  z-50">
         <div class="flex gap-2 items-center">
           <h1 class="bg-[#3d9970] text-white p-[.85rem] rounded-[50%] text-[1rem] font-bold ">BH</h1>
           <h2 class="text-xl font-bold">Betahouse</h2>
@@ -81,13 +81,27 @@
         <div class="bg-white py-[3rem] lg:py-0 lg:pl-[2rem]  h-[23rem]  w-[100%] lg:h-[5.5rem] flex flex-col justify-center  lg:flex-row  lg:justify-between items-center lg:w-[100%] main-bar relative">
           <div class="titles">
             <h2 class="mb-[.5rem] text-center text-[1.5rem] lg:text-[1rem]">LOCATION</h2>
-            <p class="text-[.85rem] text-center">e.g. Gbagada</p>
+            <!-- <p class="text-[.85rem] text-center">e.g. Gbagada</p> -->
+            <select id="state" class="cursor-pointer" onchange="updateCities()">
+              <option value="">Select State</option>
+              <option value="Lagos">Lagos</option>
+              <option value="Abuja">Abuja</option>
+              <option value="Rivers">Rivers</option>
+          </select>
+          
+          <select id="city">
+              <option value="">Select City</option>
+          </select>
           </div>
           <div class="bg-slate-400 w-[90%] h-[1px] lg:w-[1px] lg:h-[4rem] mt-[1rem]">.</div>
           
           <div class="titles text-center">
             <h2 class="mb-[.5rem] text-center text-[1.5rem] lg:text-[1rem]">PROPERTY TYPE</h2>
-            <p class="text-[.85rem] text-center">e.g. Duplex, bedroom flat</p>
+            <!-- <p class="text-[.85rem] text-center">e.g. Duplex, bedroom flat</p> -->
+            <select id="propertyType">
+              <option value="">Select Property Type</option>
+          </select>
+          
           </div>
           <div class="bg-slate-400 w-[90%] h-[1px] lg:w-[1px] lg:h-[4rem] mt-[1rem]">.</div>
           <div class="titles ">
@@ -101,7 +115,7 @@
             </div>
             
           </div>
-          <button class="bg-[#3d9970] flex text-white font-bold  rounded-r-[5px] items-center justify-center w-[90%] py-[1rem] lg:py-0 lg:w-[240px] lg:h-[5.5rem] lg:ml-[-5rem]">
+          <button class="bg-[#3d9970] flex text-white font-bold  rounded-r-[5px] items-center justify-center w-[90%] py-[1rem] lg:py-0 lg:w-[210px] lg:h-[5.5rem] ">
             <p>Find Property</p>
           </button>
         </div>
@@ -110,7 +124,7 @@
     </header>
 
     <!-- Choose properties section -->
-    <section class="px-[4rem] lg:px-[6rem] py-[2rem] bg-white">
+    <section class="px-[2rem] lg:px-[6rem] py-[2rem] bg-white">
      <div class="flex justify-between items-center mb-[2rem]">
       <div class="flex items-center gap-[1.5rem]">
         <img class="size-[1rem]" src="images/Icon.png" alt="">
@@ -122,7 +136,7 @@
       </div>     
      </div>
        <!-- Container section -->
-       <div class="container content-center pl-[1rem]  items-center grid grid-cols-1  lg:grid-cols-3 gap-[2rem]" id="container">
+       <div class="container content-center justify-center pl-[.75rem]  lg:ml-0  items-center grid grid-cols-1  lg:grid-cols-3 gap-[2rem]" id="container">
           
           </div>
           <!-- <div class="pagination" id="pagination"></div> -->
@@ -143,7 +157,7 @@
 
     <!-- Discover section -->
     <section class="swiper h-[40rem]  px-[4rem] py-[5rem] ">
-        <h1 class="text-center text-[2.5rem] lg:text-[3rem] font-bold mb-[3rem]">Discover Our Popular Properties</h1>
+        <h1 class="text-center text-[1.5rem] lg:text-[3rem] font-bold mb-[3rem]">Discover Our Popular Properties</h1>
       <div class="swiper-wrapper " id="swiper-wrapper">
          
       </div>      
@@ -152,10 +166,10 @@
       <!-- Navigation Arrows -->
       <div class="swiper-button-prev"></div>
       <div class="swiper-button-next"></div>
-        <button id="custom-prev" class="absolute top-[60%] lg:top-[50%] left-0 rounded-[50%] z-20 p-[1rem] text-[1.25rem] text-white">
+        <button id="custom-prev" class="absolute top-[50%] lg:top-[50%] left-0 rounded-[50%] z-20 p-[1rem] text-[1.25rem] text-white">
           <i class="fa-solid fa-arrow-left"></i>
         </button>
-    <button id="custom-next" class="absolute top-[60%] lg:top-[50%] right-0 rounded-[50%] z-20 p-[1rem] text-[1.25rem] text-white">
+    <button id="custom-next" class="absolute top-[55%] lg:top-[50%] right-0 rounded-[50%] z-20 p-[1rem] text-[1.25rem] text-white">
       <i class="fa-solid fa-arrow-right"></i>
     </button>
   </section>
@@ -208,12 +222,12 @@
     <div class="bg-white w-[100%] h-[0.4px] mt-[1rem] "></div>
     <div class="flex justify-between w-[100%] items-center px-[2rem] mt-[2rem]">
       <div class="flex items-center gap-[.5rem]">
-        <p class="text-[0.65rem]  md:text-[0.75rem] lg:text-[0.85rem]">&copy;Copyright 2025 betahouse</p>
+        <p class="text-[0.5rem]  md:text-[0.75rem] lg:text-[0.85rem]">&copy;Copyright 2025 betahouse</p>
         <div class="bg-white w-[0.5px] h-[1rem]"></div>
-        <p class="text-[0.65rem]  md:text-[0.75rem] lg:text-[0.85rem]">Designed by micheal.fig</p>
+        <p class="text-[0.55rem]  md:text-[0.75rem] lg:text-[0.85rem]">Designed by micheal.fig</p>
       </div>
       <div class="">
-        <p class="text-[0.65rem] md:text-[0.75rem] lg:text-[0.85rem]">Privacy Policy</p>
+        <p class="text-[0.55rem] md:text-[0.75rem] lg:text-[0.85rem]">Privacy Policy</p>
       </div>
     </div>
     <div class="flex items-center justify-center text-center mt-[2rem] ">

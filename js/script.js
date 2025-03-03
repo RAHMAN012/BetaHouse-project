@@ -27,17 +27,17 @@ const pagination = document.getElementById("pageNumbers");
  //  generate card
  function generateCard(card) {
   return `
-      <div class="w-[21.75rem] bg-white h-[32rem] lg:h-[35rem] border-[lightgray] border card-container">
+      <div class="w-[21rem] lg:w-[21.75rem] bg-white h-[31.5rem] lg:h-[35rem] border-[lightgray] border card-container">
                <div class="relative">
                                
                 <img class="h-[18rem] w-full mb-[1rem]" src="${card.image}" alt="house-image">
                 <!-- image buttons -->  
-                <div class="flex justify-between items-center gap-[6rem] px-[1.5rem] py-[1.5rem] absolute top-0">
-                  <button class="btn bg-[#3d9970] text-white px-[1.5rem] py-[.5rem] text-center text-[0.8rem] font-medium hover:scale-110 transition-transform duration-300">Featured</button>
-                  <button class="btn img-btn text-white px-[1.5rem] py-[.5rem] text-center text-[0.8rem] font-medium hover:scale-110 transition-transform duration-300 ">For Sale</button>
+                <div class="flex justify-between items-center gap-[7rem] lg:gap-[8.25rem] px-[1.5rem] py-[1.5rem] absolute top-0">
+                  <button class="btn bg-[#3d9970] text-white px-[1rem] py-[.5rem] text-center text-[0.8rem] font-medium hover:scale-110 transition-transform duration-300">Featured</button>
+                  <button class="btn img-btn text-white px-[1rem] py-[.5rem] text-center text-[0.8rem] font-medium hover:scale-110 transition-transform duration-300 ">For Sale</button>
                 </div>
                 <!-- batch b image buttons -->
-                 <div class="flex items-center gap-[1rem] absolute top-[15rem] left-[13rem]">
+                 <div class="flex items-center gap-[1rem] absolute top-[15rem] left-[11.5rem] lg:left-[13rem]">
                   <div class="bg-[#878787] p-[.35rem] rounded-md cursor-pointer hover:scale-110 transition-transform duration-300">
                     <img src="images/chain.png" alt="chain">
                   </div>
@@ -68,7 +68,7 @@ const pagination = document.getElementById("pageNumbers");
                   </div>
                  </div>
                  <!-- border line -->
-                  <div class="bg-[lightgray] w-[18.5rem] h-[0.5px] mb-[1rem]" ></div>
+                  <div class="bg-[lightgray] w-[15rem] lg:w-[18.5rem] h-[0.5px] mb-[1rem]" ></div>
                   <!-- pricing -->
                    <div class="flex items-center justify-around">
                     <p class="text-[1.25rem] font-bold">${card.price} </p>
@@ -175,3 +175,63 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 });
+
+
+// selection option for different states 
+const citiesByState = {
+  "Lagos": ["Ikeja", "Victoria Island", "Surulere", "Lekki", "Yaba"],
+  "Abuja": ["Garki", "Maitama", "Wuse", "Gwarinpa", "Asokoro"],
+  "Rivers": ["Port Harcourt", "Obio-Akpor", "Bonny", "Eleme", "Oyigbo"]
+};
+
+// Function to populate city options based on selected state
+function updateCities() {
+  let stateSelect = document.getElementById("state");
+  let citySelect = document.getElementById("city");
+  let selectedState = stateSelect.value;
+
+  // Clear previous cities
+  citySelect.innerHTML = '<option value="">Select City</option>';
+
+  if (selectedState && citiesByState[selectedState]) {
+      citiesByState[selectedState].forEach(city => {
+          let option = document.createElement("option");
+          option.value = city;
+          option.textContent = city;
+          citySelect.appendChild(option);
+      });
+  }
+}
+
+// for bedroom types
+const propertyTypes = [
+  "Apartment",
+  "Detached House",
+  "Semi-Detached House",
+  "Bungalow",
+  "Duplex",
+  "Terraced House",
+  "Penthouse",
+  "Villa",
+  "Commercial Property",
+  "Land"
+];
+
+// Function to populate the property type dropdown
+function populatePropertyTypes() {
+  let propertySelect = document.getElementById("propertyType");
+  
+  // Clear existing options
+  propertySelect.innerHTML = '<option value="">Select Property Type</option>';
+
+  // Add property types dynamically
+  propertyTypes.forEach(type => {
+      let option = document.createElement("option");
+      option.value = type;
+      option.textContent = type;
+      propertySelect.appendChild(option);
+  });
+}
+
+// Call the function on page load
+window.onload = populatePropertyTypes;
