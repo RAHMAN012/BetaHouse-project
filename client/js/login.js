@@ -1,3 +1,4 @@
+import {BASE_URL} from "./config.js"
 document.getElementById('login-form').addEventListener('submit', async (e) => {
     e.preventDefault();
   
@@ -23,14 +24,14 @@ document.getElementById('login-form').addEventListener('submit', async (e) => {
   if(!isValid) return; //stop if validation fails
 
     try {
-      const response = await fetch('http://localhost:5000/api/auth/login', {
+
+      const response = await fetch(`${BASE_URL}/api/auth/login`, {  // Use template string with BASE_URL
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({ email, password }),
       });
-       
       const data = await response.json()
       
       

@@ -1,0 +1,1 @@
+export const BASE_URL = "https://betahouse-backend-7sk4.onrender.com"
