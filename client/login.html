@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+<script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>BetaHouse</title>
+  </head>
+  <body>
+    <main class="flex flex-col lg:flex-row w-[100%] ">
+      <!-- FORM SECTION -->
+      <section class="w-full lg:w-[40%] relative bg-white pl-[2.5rem] pt-[2rem] pr-[2.5rem] pb-[2rem] ">
+        <a href="index.html" target="_blank" class=" lg:hidden absolute top-0 text-center justify-center items-center pl-[4rem] flex gap-2 mb-[8rem]  pt-[2rem]">
+          <span class="bg-[#4ba586] bh-logo text-white font-bold">BH</span>
+          <p class="font-bold text-[1.5rem] text-black">BetaHouse</p>
+        </a>
+        <div class="w-[100%] relative mt-[7rem]">          
+          <h1 class="font-bold text-[1.25rem]  lg:mt-[1rem] mb-[.5rem] w-full">
+            Welcome back to BetaHouse
+          </h1>
+          <p class="text-[.75rem]">
+            Let's get started by filling out the information below.
+          </p>
+        </div>
+        <form
+        id="login-form"
+          action=""
+          class="flex flex-col gap-2  mt-[.75rem]"
+        >
+          <div class="email flex flex-col w-full">
+            <label for="email" class="mb-[.5rem] text-[.85rem]">Email</label>
+            <input type="email" name="email" id="email" placeholder="Email"
+            class="border-2 pl-[1rem] text-[.75rem] border-[#dedfe0] h-[2.5rem]"">
+            <small class="error-message text-red-500"></small> <!-- Error message appears here -->
+          </div>
+          <div class="password flex flex-col w-full">
+            <label for="password" class="mb-[.5rem] text-[.85rem]"
+              >Password</label
+            >
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Password"
+              class="border-2 pl-[1rem] text-[.75rem] border-[#dedfe0] h-[2.5rem]"
+            />
+            <small class="error-message text-red-500"></small> <!-- Error message appears here -->
+          </div>
+          <div class="flex items-center justify-between gap-1 mt-[.5rem]">
+            <label class="custom-checkbox flex items-center">
+              <input type="checkbox" id="defaultCheckbox2" class="hidden" />
+              <span class="checkmark"></span>
+             <p class="text-[.75rem]">Remember Me</p>
+            </label>
+            <div class="">
+              <a href="#" class="text-[.75rem] text-red-500 no-underline">Forgot Password?</a>
+            </div>
+          </div>
+          <div class=" flex flex-col items-center justify-center">
+            <button
+            type="submit"
+            class="btn signup-btn bg-[#3d9970] h-[2.8rem] text-white px-[2rem] w-[100%] mt-[1rem]"
+          >
+            Sign In
+          </button>
+          <div class="flex items-center gap-2 mt-[1rem]">
+            <div class="bg-[#4f4e4e] w-[10rem] h-[0.5px]"></div>
+            <div class="">or</div>
+            <div class="bg-[#4f4e4e] w-[10rem] h-[0.5px]"></div>
+          </div>
+          <button id="google-signin-btn" class="google-btn  btn border-2 border-black h-[2.8rem] px-[2rem] w-[100%] flex items-center gap-4 justify-center mt-[1rem]">
+            <img src="images/icon_google.png" alt="google icon">
+            <p> Continue with google</p>
+          </button>
+          </div>          
+          <p class="text-center mt-[1rem] text-[.85rem]">
+            New User? <a href="signup.html" class="text-[#3d9970]">Sign Up</a>
+          </p>
+        </form>
+      </section>
+      <!-- IMAGE SECTION -->
+      <section class="signup-image w-full relative  h-[40rem] hidden lg:block">
+        <a href="index.html" target="_blank" class="flex gap-2 items-center mb-[2rem] pl-[2rem] pt-[2rem]">
+          <span class="bg-[#4ba586] bh-logo text-white font-bold">BH</span>
+          <p class="font-bold text-[1.5rem] text-white">BetaHouse</p>
+        </a>
+      </section>
+    </main>
+
+    
+    <script type="module" src="js/login.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
